@@ -10,7 +10,6 @@ for word in sentence:
   listWord.append(word.lower())
 
 for x in listWord:
-  dictWord[x]=[listWord.count(x)]
+  dictWord[listWord.count(x)]=[x]
 
-    
-print dictWord
+print sorted(dictWord.items(), reverse=True)
