@@ -11,6 +11,8 @@ class TestCalculator(unittest.TestCase):
   def test_Divide(self):
   	with self.assertRaises(ZeroDivisionError):
   		self.assertEqual(calculator.divide(10,0))
+  def test_None(self):
+  	self.assertEqual(calculator.operator(1,'A',1),None)
 
   def test_operator(self):
   	self.assertEqual(calculator.add(13,11),24)
