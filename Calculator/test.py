@@ -20,5 +20,8 @@ class TestCalculator(unittest.TestCase):
   	self.assertEqual(calculator.divide(16,2),8)
   	self.assertEqual(calculator.multiply(7,-3),-21)
 
+  def test_Output(self):
+  	self.assertEqual(calculator.output(10,'/',10,1),'10 / 10 = 1')
+
 if __name__ == "__main__":
    unittest.main()
