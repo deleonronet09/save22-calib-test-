@@ -11,11 +11,11 @@ def divide(input1,input2):
   return input1/input2
   
 def operand():
-  print '\n'
   print "a. ADDITION (+)"
   print "b. SUBTRACTION (-)"
   print "c. MULTIPLICATION (*)"
   print "d. DIVISION (/)"
+  
   operand = raw_input("Choose operation to be performed: ")
   return operand
   
