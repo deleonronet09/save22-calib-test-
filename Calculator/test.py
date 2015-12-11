@@ -9,7 +9,8 @@ class TestCalculator(unittest.TestCase):
   def test_Multiply(self):
   	self.assertEqual(calculator.multiply(1,1),1)
   def test_Divide(self):
-    self.assertEqual(calculator.divide(10,0))
+  	with self.assertRaises(ZeroDivisionError):
+  		self.assertEqual(calculator.divide(10,0))
 
   def test_operator(self):
   	self.assertEqual(calculator.add(13,11),24)
