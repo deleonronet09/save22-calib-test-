@@ -11,16 +11,21 @@ def divide(input1,input2):
   return input1/input2
   
 def operator(num1,op,num2):
-  if op == '+':
-    return add(num1,num2)
-  elif op == '-':
-    return subtract(num1,num2)
-  elif op == '*':
-    return multiply(num1,num2)
-  elif op == '/':
-    return divide(num1,num2)
-  else:
-    return None 
+  # if op == '+':
+  #   return add(num1,num2)
+  # elif op == '-':
+  #   return subtract(num1,num2)
+  # elif op == '*':
+  #   return multiply(num1,num2)
+  # elif op == '/':
+  #   return divide(num1,num2)
+  # else:
+  #   return None 
+  functions = {'+':add, '-':subtract, '*':multiply, '/':divide}
+  func = functions.get(op, None)
+  if func:
+    return func(num1,num2)
+  return None
     
 def input1():
   return int(raw_input("Enter first number: "))
